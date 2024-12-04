@@ -2,7 +2,10 @@
 
 The **Home Rental Management System** is a Node.js application that helps property owners efficiently manage their rental properties and tenants. This web-based application offers functionality to track property listings, tenant applications, lease agreements, maintenance requests, and tenant referrals. It leverages **Redis Stack Server** for high-speed data operations, ensuring optimal performance for key features.
 
-The application is built using **Express** for server-side logic and **EJS** templates for the front-end interface.
+The application is built using **Express** for server-side logic and **EJS** templates for the front-end interface.a
+
+Please refer to the PDF document for more information, regarding the project.
+You can also view the demo of the project with this [Youtube Video](https://youtu.be/tNICxFiRuFo)
 
 ## Features
 - **Tenant Referrals**: Track and manage referrals where current tenants can refer new tenants, earning rewards like rent discounts.
@@ -49,7 +52,6 @@ To get started with the project, clone the repository using the following comman
 ```bash
 git clone https://github.com/Pranav2501/home-rental-redis.git
 ```
-Replace `<repository-url>` with the actual URL of the Git repository.
 
 ### Navigating to the Project Directory
 After cloning the repository, navigate into the project directory:
@@ -100,23 +102,7 @@ Open your web browser and navigate to [http://localhost:3000](http://localhost:3
 - **Lease Agreements**: View and manage leases between tenants and properties.
 - **Maintenance Requests**: Track maintenance requests submitted by tenants.
 
-## Screenshots
-- **Dashboard**: Provides a summary of referrals, leases, and maintenance requests.
-- **Forms**: Easy-to-use forms to create, update, and delete data records.
-
-## Contributing
-If you wish to contribute to the project, please follow these steps:
-1. Fork the repository.
-2. Create a feature branch (`git checkout -b feature-branch-name`).
-3. Commit your changes (`git commit -m 'Add new feature'`).
-4. Push to the branch (`git push origin feature-branch-name`).
-5. Create a new pull request.
-
 ## License
 This project is licensed under the MIT License. See the LICENSE file for more information.
 
-## Contact
-For any questions or support, please contact:
-- **Name**: Pranav Raj Sowrirajan Balaji
-- **Email**: [your-email@example.com](mailto:your-email@example.com)
 
