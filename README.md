@@ -5,7 +5,7 @@ The **Home Rental Management System** is a Node.js application that helps proper
 The application is built using **Express** for server-side logic and **EJS** templates for the front-end interface.a
 
 Please refer to the PDF document for more information, regarding the project.
-You can also view the demo of the project with this [Youtube Video](https://youtu.be/tNICxFiRuFo)
+You can also view the demo of the project with this [Youtube Video](https://youtu.be/BTbKTQ0OzyE)
 
 ## Features
 - **Tenant Referrals**: Track and manage referrals where current tenants can refer new tenants, earning rewards like rent discounts.
