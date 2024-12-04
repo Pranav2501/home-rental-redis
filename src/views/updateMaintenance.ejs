@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Maintenance Request</title>
+    <link rel="stylesheet" href="/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .form-container {
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            width: 400px;
+            padding: 30px;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 1.8rem;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-weight: bold;
+            margin-top: 15px;
+            display: block;
+            color: #555;
+        }
+
+        input[type="text"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 80px;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h1>Update Maintenance Request</h1>
+        <form action="/maintenance/update/<%= propertyID %>/<%= index %>" method="POST">
+            <label for="tenantID">Tenant ID:</label>
+            <input type="text" id="tenantID" name="tenantID" value="<%= request.tenantID %>" required>
+
+            <label for="description">Description:</label>
+            <textarea id="description" name="description" required><%= request.description %></textarea>
+
+            <label for="status">Status:</label>
+            <select id="status" name="status" required>
+                <option value="Open" <%= request.status === 'Open' ? 'selected' : '' %>>Open</option>
+                <option value="In Progress" <%= request.status === 'In Progress' ? 'selected' : '' %>>In Progress</option>
+                <option value="Completed" <%= request.status === 'Completed' ? 'selected' : '' %>>Completed</option>
+            </select>
+
+            <button type="submit">Update</button>
+        </form>
+    </div>
+</body>
+</html>

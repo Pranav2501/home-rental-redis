@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Lease</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <h1>Update Active Lease</h1>
+    <form action="/leases/update/<%= tenantID %>/<%= propertyID %>" method="POST">
+        <label>Lease End Date:</label>
+        <input type="date" name="leaseEndDate" value="<%= leaseEndDate %>" required>
+        <button type="submit">Update</button>
+    </form>
+</body>
+</html>

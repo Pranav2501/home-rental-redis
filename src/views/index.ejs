@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Rental Management</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <!-- Main Header -->
+    <header>
+        <h1>Home Rental Management</h1>
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <ul>
+            <li><a href="/">Tenant Referrals</a></li>
+            <li><a href="/leases">Lease Agreements</a></li>
+            <li><a href="/maintenance">Maintenance Requests</a></li>
+        </ul>
+    </nav>
+
+    <!-- Page Content -->
+    <main>
+        <section>
+            <h2>Tenant Referrals</h2>
+            <a href="/create" class="btn">Add New Referral</a>
+        </section>
+
+        <!-- Referrals Table -->
+        <section>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Referrer Tenant ID</th>
+                        <th>Referred Tenant ID</th>
+                        <th>Status</th>
+                        <th>Reward</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% referrals.forEach(referral => { %>
+                    <tr>
+                        <td><%= referral.key.split(':')[1] %></td>
+                        <td><%= referral.details.referredTenantID %></td>
+                        <td><%= referral.details.status %></td>
+                        <td><%= referral.details.reward %></td>
+                        <td>
+                            <a href="/update/<%= referral.key %>" class="btn">Edit</a>
+                            <form action="/delete/<%= referral.key %>" method="POST" style="display:inline;">
+                                <button type="submit" class="btn btn-delete">Delete</button>
+                            </form>
+                        </td>
+                    </tr>
+                    <% }); %>
+                </tbody>
+            </table>
+        </section>
+    </main>
+</body>
+</html>
